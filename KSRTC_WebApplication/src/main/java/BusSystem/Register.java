@@ -1,10 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package BusSystem;
 
 import javax.swing.JOptionPane;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 /**
  *
@@ -176,9 +180,44 @@ public class Register extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Register");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jButton1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String firstName = fname.getText();
+                String lastName = lname.getText();
+                String emailId = Email.getText();
+                String UserName = uname.getText();
+                String mobileNumber = phnum.getText();
+                String Cityplace=city.getText();
+                String PinNumber=pin.getText();
+                String RoadNo=rdno.getText();
+                String Stateplace=state.getText();
+                int len = mobileNumber.length();
+                String Passwordtext = password.getText();
+
+                String msg = "" + firstName;
+                msg += " \n";
+                if (len != 10) {
+                    JOptionPane.showMessageDialog(jButton1, "Enter a valid mobile number");
+                }
+
+                try {
+                    Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ksrtc", "postgres", "1408");
+
+                    String query = "INSERT INTO userdata values('" + UserName+ "','" + firstName + "','" + lastName + "','" +
+                        mobileNumber+ "','" + emailId + "','" + Cityplace +"','"+Stateplace+"','"+PinNumber+"','"+RoadNo+ "','"+Passwordtext+ "')";
+
+                    Statement sta = connection.createStatement();
+                    int x = sta.executeUpdate(query);
+                    if (x == 0) {
+                        JOptionPane.showMessageDialog(jButton1, "This is alredy exist");
+                    } else {
+                        JOptionPane.showMessageDialog(jButton1,
+                            "Welcome, " + msg + "Your account is sucessfully created");
+                    }
+                    connection.close();
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                }
             }
         });
 
@@ -440,3 +479,4 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel username;
     // End of variables declaration                   
 }
+
