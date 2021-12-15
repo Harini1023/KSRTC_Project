@@ -9,7 +9,8 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
-
+import java.awt.*;  
+import javax.swing.*; 
 /**
  *
  * @author Harini
@@ -66,7 +67,7 @@ public class Register extends javax.swing.JFrame {
         Email = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(36,47,65));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -81,14 +82,19 @@ public class Register extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setBackground(new java.awt.Color(36,47,65));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        //jLabel1.setForeground(Color.white);
+
+
         jLabel1.setText("User");
+        jLabel1.setForeground(new java.awt.Color(255, 153, 0));
+
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 153, 0));
+
         jLabel2.setText("Sign Up");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -114,12 +120,14 @@ public class Register extends javax.swing.JFrame {
                 .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(36,47,65));
 
         jSeparator2.setForeground(new java.awt.Color(255, 102, 0));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("   Info");
+        jLabel11.setForeground(Color.white);
+
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -142,33 +150,49 @@ public class Register extends javax.swing.JFrame {
                 .addGap(6, 6, 6))
         );
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(36,47,65));
 
         username.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         username.setText("UserName");
+        username.setForeground(Color.white);
+
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Phone No.");
+        jLabel5.setForeground(Color.white);
+
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Address:");
+        jLabel6.setForeground(Color.white);
+
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Road No: ");
+        jLabel7.setForeground(Color.white);
+
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("City");
+        jLabel8.setForeground(Color.white);
+
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("State");
+        jLabel9.setForeground(Color.white);
+
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("Pin");
+        jLabel10.setForeground(Color.white);
+
 
         jSeparator1.setForeground(new java.awt.Color(255, 102, 0));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("First Name");
+        jLabel3.setForeground(Color.white);
+
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,12 +257,18 @@ public class Register extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setText("Last Name");
+        jLabel12.setForeground(Color.white);
+
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setText("Password");
+        jLabel13.setForeground(Color.white);
+
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("Email");
+        jLabel14.setForeground(Color.white);
+
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -348,7 +378,7 @@ public class Register extends javax.swing.JFrame {
                 .addGap(123, 123, 123))
         );
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBackground(new java.awt.Color(36,47,65));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -479,4 +509,3 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel username;
     // End of variables declaration                   
 }
-
