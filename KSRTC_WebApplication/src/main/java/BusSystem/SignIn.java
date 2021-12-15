@@ -1,14 +1,16 @@
 package BusSystem;
 
 
-import javax.swing.JOptionPane;import java.sql.Connection;
+import javax.swing.JOptionPane;
+import java.sql.Connection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;import javax.swing.*;
+import java.sql.SQLException;
+import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.JFrame;
@@ -53,12 +55,16 @@ public class SignIn extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.setBackground(new java.awt.Color(36,47,65));
+
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel2.setText("Username");
+        jLabel2.setForeground(Color.WHITE);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setText("Password");
+        jLabel3.setForeground(Color.WHITE);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -95,9 +101,27 @@ public class SignIn extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setText("Login");
         jButton1.addActionListener(new ActionListener(){
+
+         
         
 
             public void actionPerformed(ActionEvent e) {
+
+                /* if(username.getText().equals("") && password.getText().equals("")){
+                    //JOptionPane.showMessageDialog(this, "You haven't entered anything");
+                }
+        
+                else if(username.getText().equals("Admin") && password.getText().equals("123")){
+                    Main m = new Main();
+                    this.hide();
+                    m.setVisible(true);
+                }
+                 else if(!(username.getText().equals("") && password.getText().equals(""))){
+                    WelcomePage wp = new WelcomePage();
+                    this.hide();
+                    wp.setVisible(true);
+                }
+                */
                 String UserName = username.getText();
                 String Password = password.getText();
                 try {
@@ -114,13 +138,21 @@ public class SignIn extends javax.swing.JFrame {
                         WelcomePage wp = new WelcomePage();
                         dispose();
                         wp.setVisible(true);
-                        JOptionPane.showMessageDialog(jButton1, "You have successfully logged in");
-                    } else {
+                        JOptionPane.showMessageDialog(jButton1, "You have successfully logged in");}
+                        else if(username.getText().equals("Admin") && password.getText().equals("123")){
+                            Main m = new Main();
+                            this.hide();
+                            m.setVisible(true);
+                        }
+                     else {
                         JOptionPane.showMessageDialog(jButton1, "Wrong Username & Password");
                     }
                 } catch (SQLException sqlException) {
                     sqlException.printStackTrace();
                 }
+            }
+
+            private void hide() {
             }
         });
 
@@ -171,6 +203,9 @@ public class SignIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
+
+    public void hide() {
+    }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
