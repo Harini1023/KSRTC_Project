@@ -1,27 +1,34 @@
 
 package BusSystem;
+import java.sql.*;
+
+
 
 public class Main extends javax.swing.JFrame {
+    public static Connection trymefirst;
+
+
+
 
     
     public Main() {
+
+        
         initComponents();
     }
 
-    
     @SuppressWarnings("unchecked")
-    
-    private void initComponents() {
-
+    public void initComponents() {
+        
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); 
         jLabel1.setText("KSRTC Bus Reservation System");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); 
         jButton1.setText("Add Buses");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,14 +64,16 @@ public class Main extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        
         addBus ab = new addBus();
         this.hide();
         ab.setVisible(true);
     }
-    
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
-        
+      
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -81,7 +90,8 @@ public class Main extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
+       
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Main().setVisible(true);
@@ -89,8 +99,7 @@ public class Main extends javax.swing.JFrame {
         });
     }
 
-    
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    
 }
+
