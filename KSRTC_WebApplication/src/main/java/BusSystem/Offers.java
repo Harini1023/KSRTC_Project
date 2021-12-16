@@ -4,14 +4,13 @@ package BusSystem;
 
 public class Offers extends javax.swing.JFrame {
 
-    
+   
     public Offers() {
         initComponents();
     }
 
-   
+  
     @SuppressWarnings("unchecked")
-   
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -47,15 +46,15 @@ public class Offers extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Harini\\Desktop\\Harini\\KSRTC_WebApplication\\src\\main\\java\\Images\\offer.png")); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24));
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Offers");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Get 100% Upto Rs.250 ");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("COUPON CODE: 101");
 
@@ -97,15 +96,14 @@ public class Offers extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Harini\\Desktop\\Harini\\KSRTC_WebApplication\\src\\main\\java\\Images\\money.png")); // NOI18N
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel9.setText("Get 100% Upto Rs.250 ");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Get 100% Upto Rs.250 ");
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel17.setForeground(new java.awt.Color(51, 51, 51));
         jLabel17.setText("COUPON CODE: 102");
 
@@ -150,11 +148,11 @@ public class Offers extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Harini\\Desktop\\Harini\\KSRTC_WebApplication\\src\\main\\java\\Images\\price-tag.png")); // NOI18N
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Get Flat Rs.50 Cashback ");
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("COUPON CODE: 103");
 
@@ -226,11 +224,11 @@ public class Offers extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Harini\\Desktop\\Harini\\KSRTC_WebApplication\\src\\main\\java\\Images\\ribbon.png")); // NOI18N
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18));
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Decem-Bus Offer Save Upto Rs.500 ");
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("COUPON CODE: 104");
 
@@ -267,11 +265,11 @@ public class Offers extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Harini\\Desktop\\Harini\\KSRTC_WebApplication\\src\\main\\java\\Images\\gift.png")); // NOI18N
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Get 25% Off on next purchase ");
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); 
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("COUPON CODE: 105 ");
 
@@ -340,27 +338,25 @@ public class Offers extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        //Re-directs to welcome page
         WelcomePage wp = new WelcomePage();
             this.hide();
-            wp.setVisible(true);
-    }
+            wp.setVisible(true);}
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        //Re-directs to About page
         About abt = new About();
         this.hide();
-        abt.setVisible(true);
-    }
+        abt.setVisible(true);}
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        //Re-directs to COVID-19 Protocol page
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+       
          Protocol p = new Protocol();
         this.hide();
         p.setVisible(true);
     }
 
-    
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
        
         try {
@@ -379,9 +375,7 @@ public class Offers extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Offers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
-
-        /* Create and display the form */
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Offers().setVisible(true);
@@ -389,7 +383,6 @@ public class Offers extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration 
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -415,5 +408,5 @@ public class Offers extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    
 }
+
