@@ -1,4 +1,5 @@
 
+
 package BusSystem;
 
 
@@ -11,7 +12,6 @@ public class WelcomePage extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-   
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -50,22 +50,22 @@ public class WelcomePage extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(36, 47, 65));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Welcome!");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 36)); 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("To");
         jLabel2.setAutoscrolls(true);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("KSRTC");
         jLabel3.setAutoscrolls(true);
 
         jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); 
         jButton1.setForeground(new java.awt.Color(36, 47, 65));
         jButton1.setText("BOOK NOW!");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +169,9 @@ public class WelcomePage extends javax.swing.JFrame {
         this.hide();
         b.setVisible(true);
     }
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+      
         Offers off = new Offers();
         this.hide();
         off.setVisible(true);
@@ -189,7 +191,9 @@ public class WelcomePage extends javax.swing.JFrame {
         
     }
 
-    
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         
         try {
@@ -208,9 +212,7 @@ public class WelcomePage extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(WelcomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
-
-        
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new WelcomePage().setVisible(true);
@@ -218,7 +220,6 @@ public class WelcomePage extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration 
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -229,5 +230,4 @@ public class WelcomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    
 }
