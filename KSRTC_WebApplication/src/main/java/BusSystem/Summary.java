@@ -11,9 +11,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-//import javafx.print.Printer;
-  
-// Creating the fee class
+
 public class Summary extends Frame {
 
     
@@ -36,8 +34,7 @@ public class Summary extends Frame {
   
     JFileChooser f1;
   
-    // Default constructor to
-    // initialize the parameters
+    
     Summary()
     {
   
@@ -115,10 +112,7 @@ public class Summary extends Frame {
   
         l15.setBounds(900, 50, 600, 200);
   
-       // final JComboBox cb2
-            //= new JComboBox(languagess);
-  
-        //cb2.setBounds(250, 650, 90, 20);
+     
         l8 = new JLabel(
             "Offers by KSRTC:");
         l8.setBounds(800, 270, 250, 30);
@@ -160,36 +154,12 @@ public class Summary extends Frame {
         final DefaultListModel<String> li1
             = new DefaultListModel<>();
   
-        /*li1.addElement("CSE(2, 50, 000)");
-        li1.addElement("ECE(2, 50, 000)");
-        li1.addElement("EEE(2, 50, 000)");
-        li1.addElement("MECH(2, 50, 000)");
-        li1.addElement("CIVIL(2, 50, 000)");*/
-  
-        //final JList<String> list1
-            //= new JList<>(li1);
-  
-        //list1.setBounds(600, 300, 125, 125);
+      
   
         DefaultListModel<String> li2
             = new DefaultListModel<>();
   
-        /*li2.addElement(
-            "2 SHARE(1, 50, 000)");
-        li2.addElement(
-            "3 SHARE(1, 40, 000)");
-        li2.addElement(
-            "5 SHARE(1, 20, 000)");
-        li2.addElement(
-            "8 SHARE(1, 10, 000)");
-        li2.addElement(
-            "bus(40, 000)");
-  
-        final JList<String> list2
-            = new JList<>(li2);
-        list2.setBounds(
-            800, 300, 125, 125);
-  */
+     
         JButton Receipt
             = new JButton("Generate ");
         Receipt.setBounds(550, 390, 140, 30);
@@ -214,17 +184,14 @@ public class Summary extends Frame {
         add(l8);
         add(l9);
         add(l10);
-        //add(l11);
-        //add(l12);
-        //add(l13);
-        //add(l14);
+       
         add(tf1);
         add(tf2);
         add(tf3);
         add(tf4);
         add(tf5);
         add(tf6);
-        //add(tf7);
+        
         add(tf8);
         add(area1);
         add(area2);
@@ -236,11 +203,7 @@ public class Summary extends Frame {
         add(r5);
         add(r6);
         add(cb);
-      //add(cb1);
-      //add(cb2);
-        //add(list1);
-        //add(list2);
-        //add(b);
+     
         add(label);
         add(Receipt);
         add(b2);
@@ -249,8 +212,7 @@ public class Summary extends Frame {
   
         Home.addActionListener(new ActionListener() {
   
-            // Method to display the data
-            // entered in the text fields
+        
             public void actionPerformed(ActionEvent e)
             {
                 WelcomePage wp = new WelcomePage();
@@ -274,7 +236,6 @@ public class Summary extends Frame {
             //}
         });
   
-        // Reset the text fields
         b2.addActionListener(
             new ActionListener() {
                 public void actionPerformed(
@@ -292,7 +253,6 @@ public class Summary extends Frame {
                 }
             });
   
-        // Implementing the Print action
         Print.addActionListener(
             new ActionListener() {
                 public void actionPerformed(
