@@ -8,13 +8,15 @@ import java.awt.event.WindowEvent;
 import java.io.FileWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
-
 
 //import javafx.print.Printer;
   
 // Creating the fee class
 public class Summary extends Frame {
+
+    
   
     JLabel l1, l2, l3, l4,
         l5, l6, l7, l8,
@@ -23,8 +25,8 @@ public class Summary extends Frame {
   
     JTextField tf1, tf2, tf3,
         tf4, tf5, tf6,
-        tf7, tf8, tf9,
-        tf10;
+        tf7, tf8, tf9;
+        
   
     JTextArea area2, area1;
   
@@ -103,35 +105,7 @@ public class Summary extends Frame {
         tf6 = new JTextField();
         tf6.setBounds(250, 550, 250, 20);
   
-        //l11 = new JLabel(
-            //"Year of passing 10th");
-        //l11.setBounds(50, 600, 250, 20);
-  /*
-        String language[]
-            = { "2016", "2015", "2014" };
-  
-        final JComboBox cb1
-            = new JComboBox(language);
-  
-        cb1.setBounds(250, 600, 90, 20);
-  
-        l12 = new JLabel(
-            "Year of passing 12th");
-        l12.setBounds(50, 650, 250, 20);
-  
-        String languagess[]
-            = { "2019", "2018", "2017" };
-  
-        l13 = new JLabel(
-            "Points Secured in 10th:");
-        l13.setBounds(50, 700, 250, 20);
-  
-        tf7 = new JTextField();
-        tf7.setBounds(250, 700, 250, 20);
-  
-        //l14 = new JLabel("Percentage in 12th:");
-        //l14.setBounds(50, 750, 250, 20);
-  */
+   
         tf8 = new JTextField();
         tf8.setBounds(250, 750, 250, 20);
   
@@ -217,7 +191,7 @@ public class Summary extends Frame {
             800, 300, 125, 125);
   */
         JButton Receipt
-            = new JButton("Generate Receipt");
+            = new JButton("Generate ");
         Receipt.setBounds(550, 390, 140, 30);
         JButton b2 = new JButton("Reset");
         b2.setBounds(700, 390, 120, 30);
@@ -307,13 +281,14 @@ public class Summary extends Frame {
                     ActionEvent e)
                 {
                     area2.setText("");
-                    area1.setText(" ");
+                    area1.setText("");
                     tf1.setText("");
                     tf2.setText("");
                     tf3.setText("");
                     tf4.setText("");
                     tf5.setText("");
                     tf6.setText(" ");
+                   // tf7.setText(" ");
                 }
             });
   
@@ -373,76 +348,9 @@ public class Summary extends Frame {
                                     .toString()
                               + "\n");
   
-                /*if (rb1.isSelected()) {
-                    area2.setText(area2.getText()
-                                  + "Wants to Join in "
-                                  + "School of Engineering "
-                                  + "and Applied Sciences\n");
-                }
-                if (rb2.isSelected()) {
-                    area2.setText(area2.getText()
-                                  + "Wants to Join in "
-                                  + "School of Liberal "
-                                  + "Arts and Sciences\n");
-                }
-                if (rb3.isSelected()) {
-                    area2.setText(area2.getText()
-                                  + "Wants to be a "
-                                  + "Hosteller \n");
-                }
-                if (rb4.isSelected()) {
-                    area2.setText(area2.getText()
-                                  + "Wants to be a "
-                                  + "Day Scholar \n");
-                }
-                /*area2.setText(area2.getText()
-                              + "Had chosen: "
-                              + list1.getSelectedValue()
-                                    .toString()
-                              + "\n");*/
-                /*area2.setText(area2.getText()
-                              + "Had chosen: "
-                              + list2.getSelectedValue()
-                                    .toString()
-                              + "\n");*/
+            
   
-                //int index2 = list2.getSelectedIndex();
-                /*if (index2 == 0) {
-                    area2.setText(area2.getText()
-                                  + "                    "
-                                  + "Total amount to be "
-                                  + "paid is 4 Lakhs   \n");
-                }
-  
-                if (index2 == 1) {
-                    area2.setText(area2.getText()
-                                  + "                    "
-                                  + "Total amount to be paid "
-                                  + "is 3.9 Lakhs   \n");
-                }
-  
-                if (index2 == 2) {
-                    area2.setText(area2.getText()
-                                  + "                    "
-                                  + "Total amount to be paid "
-                                  + "is 3.8 Lakhs   \n");
-                }
-  
-                if (index2 == 3) {
-                    area2.setText(area2.getText()
-                                  + "                    "
-                                  + "Total amount to be paid "
-                                  + "is 3.7 Lakhs   \n");
-                }
-  
-                if (index2 == 4) {
-                    area2.setText(area2.getText()
-                                  + "                    "
-                                  + "Total amount to be paid "
-                                  + "is 2.9 Lakhs   \n");
-                }*/
-  
-                if (e.getSource() == Receipt) {
+                 if (e.getSource() == Receipt) {
                     try {
                         FileWriter fw
                             = new FileWriter(
@@ -454,42 +362,54 @@ public class Summary extends Frame {
                         System.out.println(ae);
                     }
                 }
-  
+                
                 JOptionPane.showMessageDialog(
                     area2, "DATA SAVED SUCCESSFULLY");
+                    
+                
+                    
 
+                    
                     String firstName = tf1.getText();
                     String lastName = tf2.getText();
                     String aadhar = tf3.getText();
                     String emailid = tf4.getText();
                     String contactNumber = tf5.getText();
                     String address=tf6.getText();
-                    String nationality=tf7.getText();
-                
+                    //String nationality=tf7.getText();
+                     
+                    //System.out.println(firstName);
+
+
                     try {
                         Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ksrtc", "postgres", "1408");
                 
-                        String query = "INSERT INTO TICKETSUMMARY values('" + firstName + "','" + lastName + "','" + aadhar + "','" +
-                            emailid + "','" + contactNumber + "','" + address +  "','" + nationality + "')";
+                        String query = "INSERT INTO TICKETSUMMARY values('" + tf1.getText()+ "','" + tf2.getText()+ "','" + tf3.getText() + "','" +
+                            tf4.getText()+ "','" + tf5.getText() + "','" + tf6.getText() +tf8.getText()+ "')";
                 
                         Statement sta = connection.createStatement();
                         int x = sta.executeUpdate(query);
                         if (x == 0) {
-                            JOptionPane.showMessageDialog(Receipt, "This is alredy exist");
+                            JOptionPane.showMessageDialog(Receipt, "This is already exists");
                         } else {
                             JOptionPane.showMessageDialog(Receipt,
                                 "Your ticket has been generated, " +  "Enjoy your trip");
                         }
+                        
+                        System.out.println(x);
                         connection.close();
                     } catch (Exception exception) {
                         exception.printStackTrace();
                     }
+                    
+                    }
+                    
     
-                };
+                }
+                   
 
 
-
-            });
+            );
 
 
         addWindowListener(
