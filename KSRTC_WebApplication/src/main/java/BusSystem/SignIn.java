@@ -52,7 +52,7 @@ public class SignIn extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setBackground(new java.awt.Color(36,47,65));
@@ -143,6 +143,26 @@ public class SignIn extends javax.swing.JFrame {
                             Main m = new Main();
                             this.hide();
                             m.setVisible(true);
+                        }
+                        else if(username.getText().equals("Driver101") && password.getText().equals("456")){
+                            EmployeeDetails a = new EmployeeDetails();
+                            this.hide();
+                            a.setVisible(true);
+                        }
+                        else if(username.getText().equals("Conductor101") && password.getText().equals("789")){
+                            EmployeeDetails a = new EmployeeDetails();
+                            this.hide();
+                            a.setVisible(true);
+                        }
+                        else if(username.getText().equals("CustomerService101") && password.getText().equals("123")){
+                            EmployeeDetails a = new EmployeeDetails();
+                            this.hide();
+                            a.setVisible(true);
+                        }
+                        else if(username.getText().equals("Administration101") && password.getText().equals("123")){
+                            EmployeeDetails a = new EmployeeDetails();
+                            this.hide();
+                            a.setVisible(true);
                         }
                      else {
                         JOptionPane.showMessageDialog(jButton1, "Wrong Username & Password");
